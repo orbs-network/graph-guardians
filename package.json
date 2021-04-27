@@ -1,0 +1,23 @@
+{
+  "name": "@orbs-network/graph-guardians",
+  "description": "Graph generation code for orbs-network guardians.",
+  "author": "Noam Berg <noam.berg@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbs-network/graph-guardians.git"
+  },
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ orbs-network/guardians",
+    "create-local": "graph create --node http://localhost:8020/ orbs-network/guardians",
+    "remove-local": "graph remove --node http://localhost:8020/ orbs-network/guardians",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 orbs-network/guardians"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.20.0",
+    "@graphprotocol/graph-ts": "0.20.0",
+    "node-fetch": "^2.6.1"
+  }
+}

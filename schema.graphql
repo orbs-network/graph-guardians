@@ -1,0 +1,16 @@
+type Guardian @entity {
+  id: ID!
+  "Guardian Info"
+  ethAddress: String!
+  orbsAddress: String
+  name: String
+  ip: String
+  website: String
+  "Registration Info"
+  registeredTimestamp: BigInt
+  registeredBlockNumber: BigInt
+  "Committee Info"
+  isInCommittee: Boolean
+  isCertified: Boolean
+  weight: BigInt
+}
